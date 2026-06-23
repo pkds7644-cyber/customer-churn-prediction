@@ -1,12 +1,9 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as st_sns
+import os
 
 st.set_page_config(page_title="Dataset Insights", page_icon="📊")
-
-@st.cache_data 
-import os
 
 @st.cache_data 
 def load_data():
