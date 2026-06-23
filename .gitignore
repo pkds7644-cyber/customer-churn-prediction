@@ -1,0 +1,18 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NOTE: We are intentionally NOT ignoring models/churn_model.pkl 
+# because Streamlit Cloud needs the model file to run the web app.
