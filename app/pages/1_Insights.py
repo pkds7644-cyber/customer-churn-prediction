@@ -6,10 +6,17 @@ import seaborn as st_sns
 st.set_page_config(page_title="Dataset Insights", page_icon="📊")
 
 @st.cache_data 
+import os
+
+@st.cache_data 
 def load_data():
-    try:
+    if os.path.exists('data/churn_data.csv'):
+        return pd.read_csv('data/churn_data.csv')
+    
+    elif os.path.exists('../data/churn_data.csv'):
         return pd.read_csv('../data/churn_data.csv')
-    except FileNotFoundError:
+        
+    else:
         return pd.DataFrame()
 
 st.title("📊 Dataset Insights")
